@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEN Yizhou Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.3;
+            color: #333;
+            background: white;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .left-column {
+            flex: 2;
+            padding: 30px;
+            background: white;
+        }
+        
+        .right-column {
+            flex: 1;
+            padding: 30px 25px;
+            background: #f8f9fa;
+            border-left: 1px solid #e9ecef;
+        }
+        
+        .header {
+            margin-bottom: 25px;
+        }
+        
+        .name {
+            font-size: 44px;
+            font-weight: 300;
+            color: #2d3748;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #2563eb;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 5px;
+        }
+        
+        .job-entry {
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .job-entry:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+        
+        .company {
+            font-size: 15px;
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .job-period {
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        
+        .job-description {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .job-description li {
+            font-size: 13px;
+            color: #4a5568;
+            margin-bottom: 5px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.3;
+        }
+        
+        .job-description li:before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .right-section {
+            margin-bottom: 20px;
+        }
+        
+        .right-section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #2563eb;
+            padding-bottom: 3px;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+        
+        .university {
+            color: #2563eb;
+            font-weight: 500;
+            margin-bottom: 2px;
+            font-size: 13px;
+        }
+        
+        .education-period {
+            font-size: 12px;
+            color: #4a5568;
+            margin-bottom: 2px;
+        }
+        
+        .education-note {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .director-inline {
+            text-align: left;
+        }
+        
+        .director-company {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 13px;
+        }
+        
+        .director-separator {
+            color: #2563eb;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+        
+        .director-desc {
+            font-size: 11px;
+            color: #4a5568;
+            margin-top: 3px;
+        }
+        
+        .subsection {
+            margin-bottom: 12px;
+        }
+        
+        .subsection-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 6px;
+            padding-left: 10px;
+            border-left: 3px solid #2563eb;
+            background: #f1f5f9;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        
+        .item-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .item-list li {
+            margin-bottom: 5px;
+            padding-left: 10px;
+            position: relative;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        
+        .item-list li:before {
+            content: "▸";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .item-desc {
+            color: #4a5568;
+        }
+        
+        .simple-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .simple-list li {
+            margin-bottom: 4px;
+            padding-left: 10px;
+            position: relative;
+            font-size: 12px;
+            color: #4a5568;
+            line-height: 1.3;
+        }
+        
+        .simple-list li:before {
+            content: "•";
+            color: #2563eb;
+            position: absolute;
+            left: 0;
+            font-size: 10px;
+        }
+        
+        @media print {
+            .resume-container {
+                max-width: none;
+                margin: 0;
+            }
+            
+            .left-column, .right-column {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="left-column">
+            <div class="header">
+                <h1 class="name">文一舟 WEN Yizhou</h1>
+                <div class="subtitle">PhD Student, Web3.0 & AI Application Enthusiast</div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="degree">Doctor of Philosophy</div>
+                    <div class="university">Hong Kong University of Science and Technology</div>
+                    <div class="education-period">Sept 2023 – Present • Hong Kong</div>
+                    <div class="education-note">Supervisor: Prof. WANG Yang (Former HKUST Vice-President, Current HKU Vice-President)</div>
+                    <div class="education-note">Core Courses: AI Application, Innovation in Web3.0, Blockchain Technology Application, Metaverse in Interdisciplinary Design</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Master of Architecture</div>
+                    <div class="university">Hunan University</div>
+                    <div class="education-period">GPA: 3.57/4.00 • Changsha, China</div>
+                    <div class="education-note">Supervisor: Prof. WEI Chunyu (Dean, School of Architecture, Hunan University)</div>
+                    <div class="education-note">First-Class Outstanding Student Scholarship recipient every semester</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="job-entry">
+                    <div class="job-title">Project Manager</div>
+                    <div class="company">HKUST Fintech Lab - RWA Research Group</div>
+                    <div class="job-period">2024 – Present • Hong Kong</div>
+                    <ul class="job-description">
+                        <li>Lead project management for comprehensive RWA asset evaluation and full-cycle token design initiatives</li>
+                        <li>Coordinate cross-functional research teams to develop tokenization frameworks for traditional financial assets</li>
+                        <li>Manage end-to-end project lifecycle from asset assessment to token deployment and market integration</li>
+                        <li>Facilitate collaboration between academic researchers, industry partners, and regulatory stakeholders</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">Project Manager</div>
+                    <div class="company">Meta Metopia Technology Company Limited</div>
+                    <div class="job-period">2023 – 2024 • Hong Kong</div>
+                    <ul class="job-description">
+                        <li>Led end-to-end project lifecycle management for blockchain-integrated property management system upgrade</li>
+                        <li>Coordinated cross-department teams to implement Web3.0 features including DID, digital wallets, and NFTs</li>
+                        <li>Successfully delivered pilot implementation across 3 Hong Kong properties</li>
+                        <li>Managed digital transformation initiative for restaurant industry SMEs under Hong Kong's DTSPP policy</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">CoFounder</div>
+                    <div class="company">Z.Arch Education LLC & Shanghai Baiying Education Technology</div>
+                    <div class="job-period">2018 – 2021 • USA/China</div>
+                    <ul class="job-description">
+                        <li>Founded and scaled international education technology company with dual operations in US and China</li>
+                        <li>Built and managed diverse 60-member team comprising PhD students, graduates, and Ivy League professors</li>
+                        <li>Led comprehensive curriculum design and digital platform development from concept to implementation</li>
+                        <li>Managed multi-million RMB budget allocation across marketing, technology development, and staff compensation</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">Product Design Lead</div>
+                    <div class="company">Midea Real Estate</div>
+                    <div class="job-period">2021 – 2022 • Changsha, China</div>
+                    <ul class="job-description">
+                        <li>Managed multi-professional design teams and coordinated tight-schedule project transfers</li>
+                        <li>Implemented cost and quality control measures across complex real estate development projects</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">Project Designer & Manager</div>
+                    <div class="company">WYC Design Studio</div>
+                    <div class="job-period">2015 – 2017 • Changsha, China</div>
+                    <ul class="job-description">
+                        <li>Managed multiple large-scale architectural and urban planning projects including art galleries</li>
+                        <li>Coordinated cross-disciplinary teams and facilitated stakeholder communication</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Publications & Recognition</h2>
+                
+                <div class="job-entry">
+                    <div class="job-title">Fintech Publications</div>
+                    <ul class="job-description">
+                        <li>"提議香港發行以外匯儲蓄背書的港元穩定幣" (Proposing Hong Kong to Issue HKD Stablecoin Backed by Foreign Exchange Reserves) | July 2023</li>
+                        <li>"抢夺先机发行政府支持的港元稳定币" (Seizing the Opportunity to Issue Government-Supported HKD Stablecoin) | August 2023</li>
+                        <li>"华为卖红酒：RWA Tokenization引爆金融新秩序" (Huawei Selling Wine: RWA Tokenization Ignites New Financial Order) | October 2024</li>
+                    </ul>
+                </div>
+                
+                <div class="job-entry">
+                    <div class="job-title">Awards & Recognition</div>
+                    <ul class="job-description">
+                        <li>2024 Web3.0 Innovation Competition - Signed Project: SME Web3.0+AI Digital Business Solution</li>
+                        <li>HKUST Fintech Lab RWA Research Group Member (2024-Present)</li>
+                        <li>CGDA Visual Communication Design Competition - Project "Created Campus," Honorable Mention (2022)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="right-section">
+                <h3 class="right-section-title">Languages & Skills</h3>
+                
+                <div class="director-inline">
+                    <span class="director-company">English (Proficient)</span> <span class="director-separator">|</span> <span class="director-company">Mandarin (Native)</span>
+                    <div class="director-desc">TOEFL 110 | International coordination experience</div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <h3 class="right-section-title">Technical Expertise</h3>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Traditional-to-Web3 Transformation</div>
+                    <ul class="item-list">
+                        <li><span class="item-title">Asset Evaluation:</span><span class="item-desc"> Traditional asset assessment methodologies adapted for blockchain tokenization</span></li>
+                        <li><span class="item-title">Business Model Innovation:</span><span class="item-desc"> Designing new revenue streams and operational frameworks for Web3 integration</span></li>
+                        <li><span class="item-title">User Management:</span><span class="item-desc"> Bridging traditional customer experience with DeFi and blockchain interactions</span></li>
+                        <li><span class="item-title">Capital Flow Design:</span><span class="item-desc"> Creating funding pathways between traditional finance and decentralized systems</span></li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Blockchain & Web3.0</div>
+                    <ul class="item-list">
+                        <li><span class="item-title">Smart Contracts:</span><span class="item-desc"> Solidity development, DeFi protocols, RWA tokenization</span></li>
+                        <li><span class="item-title">Web3.0 Integration:</span><span class="item-desc"> DID, digital wallets, NFT implementation</span></li>
+                        <li><span class="item-title">Cross-Industry Bridge:</span><span class="item-desc"> Connecting traditional sectors with blockchain infrastructure</span></li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Project Management</div>
+                    <ul class="item-list">
+                        <li><span class="item-title">Tools:</span><span class="item-desc"> JIRA, Microsoft Project, Trello, Asana</span></li>
+                        <li><span class="item-title">Methodologies:</span><span class="item-desc"> Agile/Scrum, Kanban</span></li>
+                        <li><span class="item-title">Risk Management:</span><span class="item-desc"> Cross-sector transformation risk assessment and mitigation</span></li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Programming & Analysis</div>
+                    <ul class="item-list">
+                        <li><span class="item-title">Languages:</span><span class="item-desc"> Python, Solidity</span></li>
+                        <li><span class="item-title">Data Analysis:</span><span class="item-desc"> SPSS, Stata, Excel VBA</span></li>
+                        <li><span class="item-title">Design Tools:</span><span class="item-desc"> AutoCAD, Adobe Suite, ArcGIS</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <h3 class="right-section-title">Leadership & Management</h3>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Team Leadership</div>
+                    <ul class="simple-list">
+                        <li>Built and managed 60+ member international team across US and China</li>
+                        <li>Coordinated PhD students, professors, and industry professionals</li>
+                        <li>Led cross-functional teams in blockchain, AI, and real estate projects</li>
+                        <li>Managed multi-million RMB budgets with accountability and transparency</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">International Coordination</div>
+                    <ul class="simple-list">
+                        <li>Facilitated partnerships with Ivy League universities</li>
+                        <li>Coordinated operations across multiple time zones and cultures</li>
+                        <li>Managed regulatory compliance in US, China, and Hong Kong</li>
+                        <li>Established strategic relationships with government agencies</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <h3 class="right-section-title">Industry Impact</h3>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Web3.0 Innovation</div>
+                    <ul class="simple-list">
+                        <li>Pioneered Hong Kong's first property management Web3.0 system</li>
+                        <li>Developed RWA tokenization frameworks at HKUST Fintech Lab</li>
+                        <li>Created AI-integrated blockchain solutions for SME transformation</li>
+                        <li>Published influential articles on stablecoin and tokenization</li>
+                    </ul>
+                </div>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Market Transformation</div>
+                    <ul class="simple-list">
+                        <li>Led digital transformation for restaurant industry under DTSPP</li>
+                        <li>Implemented blockchain solutions across 3 Hong Kong properties</li>
+                        <li>Advanced RWA tokenization for resource assets, IP assets, and bulk commodities</li>
+                        <li>Facilitated international student placement programs</li>
+                        <li>Advanced sustainable architecture and urban planning practices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <h3 class="right-section-title">Research Focus</h3>
+                
+                <div class="subsection">
+                    <div class="subsection-title">Current Research Areas</div>
+                    <ul class="simple-list">
+                        <li>Real World Asset (RWA) Tokenization and asset evaluation methodologies</li>
+                        <li>DeFi protocols and tokenomics for traditional financial integration</li>
+                        <li>AI applications in blockchain and financial technology systems</li>
+                        <li>Cross-border digital transformation and regulatory frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
